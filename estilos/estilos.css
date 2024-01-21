@@ -1,0 +1,2213 @@
+/*-------------------CONFIGURAÇÕES GERAIS-------------------*/
+/*POSIÇÃO*/
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+/*DETALHE DE INPUT*/
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    }
+
+/*CONFIGURAÇÃO DOS ICONES*/
+    .material-icons.md-18 { font-size: 18px; }
+    .material-icons.md-24 { font-size: 24px; }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-icons.md-48 { font-size: 48px; }
+
+
+/*CONFIGURAÇÃO DO TEXTO*/
+    .t1{
+        text-align: center;
+    }
+    /*CONFIGURAÇÃO DO LINK*/
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+/*CORES*/
+    html{
+        --bg0: rgb(32, 33, 48);
+        --bg1: white;
+        --bg2: black;
+        --bg3: rgb(45, 45, 54);
+        --bg4: rgb(185, 185, 187);
+        --color1: white;
+        --color2: black;
+        --pass1: gray;
+    }
+
+/*--------------------------HEADER----------------------------*/
+/*DIVS DO HEADER*/
+    /*CONTEINER PAI*/
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+    /*CONTEINERS FILHOS*/
+        .head-1{
+            display: block;
+        }
+        /*ELEMENTO DO CONTEINER 1*/
+            .perfil{
+                cursor: pointer;
+            }
+
+        .head-2{
+            display: block;
+        }
+
+        .head-3{
+            display: block;
+        }
+
+
+/*---------------------------MENU-------------------------------*/
+/*MENU BURGUER*/
+    /*CORPO*/
+        body{
+            overflow-x: hidden;
+        }
+    .menu{
+        cursor: pointer;
+    }
+
+    /*CONTEINER PRINCIPAL*/
+        .conteiner-menu{
+            display: block;
+            position: absolute;
+            top: 35px;
+            right: 0px;
+            width: 50%;
+            height: 160vh;
+            z-index: 1000;
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+    /*INTERAÇÃO COM O CONTEINER*/
+        .conteiner-menu.active{
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+        }
+
+    /*ELEMENTOS DO MENU*/
+        .list-menu{
+            margin-left: 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .sel{
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+        }
+        .sel:hover{
+            color: gray;
+        }
+
+    /*SWITCH DARK/LIGTH*/
+        #check{
+            display: none;
+        }
+        .switch{
+            position: relative;
+            background-color: gray;
+            width: 50px;
+            height: 15px;
+            border-radius: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            -o-border-radius: 40px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -ms-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        .slider{
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            -ms-transition: 0.5s ease-in-out;
+            -o-transition: 0.5s ease-in-out;
+        }
+        #check:checked ~ .switch{
+            background-color: white;
+        }
+        #check:checked ~ .switch .slider{
+            background-color: black;
+            transform: translateX(35px);
+            -webkit-transform: translateX(35px);
+            -moz-transform: translateX(35px);
+            -ms-transform: translateX(35px);
+            -o-transform: translateX(35px);
+        }
+
+/*---------------------ELEMENTOS DO CORPO----------------------*/
+/*GERAIS*/
+    .conteiner-titulo{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-decoration: underline;
+    }
+/*TIPO DE FORMULARIO 1*/
+    /*CONTEINER DE INPUT*/
+        .div-input{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+    /*CONFIGURAÇÃO DE INPUT*/
+        .input-1{
+            text-align: center;
+            width: 200px;
+            height: 25px;
+            border: solid gray 1px;
+            border-radius: 10px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .input-1:focus{
+            border: solid black 1.9px;
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+
+        .input-select{
+            text-align: center;
+            width: 150px;
+            height: 25px;
+            border-radius: 10px;
+        }
+
+    /*CONTEINER DE BOTÃO*/
+        .div-btn{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    /*CONFIGURAÇÃO DO BOTÃO I*/
+        .btn-1{
+            height: 30px;
+            width: 100px;
+            background-color: transparent;
+            border: solid black 1px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .btn-1:hover{
+            background-color: black;
+            color: white;
+            border: solid gray 2px;
+        }
+
+    /*CONFIGURAÇÃO DE BOTÃO II*/
+        .btn-2{
+            height: 30px;
+            width: 200px;
+            background-color: transparent;
+            border: solid black 1px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .btn-2:hover{
+            background-color: black;
+            color: white;
+            border: solid gray 2px;
+        }
+
+
+/*--------------------ESCOLHA E CRIAÇÃO DE SALA-------------------*/
+/*TIPO DA SALA*/
+    /*CONTEINER ESCOLHA DO TIPO DA SALA*/
+    .conteiner-esc{
+        padding-top: 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*ESCOLHA DO TIPO DA SALA MEDIO*/
+        .esc-1{
+            z-index: 10;
+            position: relative;
+            width: 150px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin-bottom: 10px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .esc-1:hover{
+            box-shadow: 0px 8px 6px -6px black;
+            background-color: gray;
+            transform: translateY(-5px);
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            -o-transform: translateY(-5px);
+        }
+        .esc-1.sele-1{
+            background-color: gray;
+        }
+    /*ESCOLHA DE TIPO DA SALA FUNDAMENTAL*/
+        .esc-2{
+            z-index: 10;
+            width: 150px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin-bottom: 10px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .esc-2:hover{
+            box-shadow: 0px 8px 6px -6px black;
+            background-color: gray;
+            transform: translateY(-5px);
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            -o-transform: translateY(-5px);
+        }
+        .esc-2.sele-2{
+            background-color: gray;
+        }
+
+/*TITULO DA SALA*/
+    /*CONTEINER TITULO DA SALA*/
+        .conteiner-texto{
+            display: flex;
+            justify-content: center;
+        }
+    /*CORTINA O TITULO DA SALA*/
+        .cortina{
+            overflow: hidden;
+            width: 200px;
+            height: 25px;
+        }
+    /*TEXTO DO TITULO DO MEDIO*/
+        .texto-medio{
+            position: relative;
+            top: -25px;
+            width: 200px;
+            text-align: center;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+        .texto-medio.subir1{
+            transform: translateY(25px);
+            -webkit-transform: translateY(25px);
+            -moz-transform: translateY(25px);
+            -ms-transform: translateY(25px);
+            -o-transform: translateY(25px);
+        }
+    /*TEXTO DO TITULO DO FUNDAMENTAL*/
+        .texto-fundamental{
+            position: relative;
+            top: 25px;
+            width: 200px;
+            text-align: center;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+        .texto-fundamental.subir2{
+            transform: translateY(-50px);
+            -webkit-transform: translateY(-50px);
+            -moz-transform: translateY(-50px);
+            -ms-transform: translateY(-50px);
+            -o-transform: translateY(-50px);
+        }
+
+
+/*FORMULARIO DE CRIAÇÃO DE SALA*/
+    /*CORTINA FORMULARIO*/
+        .cortina-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0px;
+            transition: 0.8s;
+            -webkit-transition: 0.8s;
+            -moz-transition: 0.8s;
+            -ms-transition: 0.8s;
+            -o-transition: 0.8s;
+        }
+        .cortina-2.mostrar3-1{
+            height: 150px;
+        }
+        .cortina-2.mostrar3-2{
+            height: 150px;
+        }
+        .ocultador{
+            overflow: hidden;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+        }
+
+    /*FORMULARIO DO FUNDAMENTAL*/
+        .esc-fundamen{
+            position: relative;
+            left: -200px;
+            transition: 0.8s;
+            -webkit-transition: 0.8s;
+            -moz-transition: 0.8s;
+            -ms-transition: 0.8s;
+            -o-transition: 0.8s;
+        }
+        .esc-fundamen.mostrar1{
+            display: flex;
+            width: 200px;
+            transform: translateX(300px);
+            -webkit-transform: translateX(300px);
+            -moz-transform: translateX(300px);
+            -ms-transform: translateX(300px);
+            -o-transform: translateX(300px);
+        }
+
+
+    /*FORMULARIO DO MEDIO*/
+        .esc-medi{
+            position: relative;
+            left: 200px;
+            transition: 0.8s;
+            -webkit-transition: 0.8s;
+            -moz-transition: 0.8s;
+            -ms-transition: 0.8s;
+            -o-transition: 0.8s;
+        }
+        .esc-medi.mostrar2{
+            display: flex;
+            transform: translateX(-300px);
+            -webkit-transform: translateX(-300px);
+            -moz-transform: translateX(-300px);
+            -ms-transform: translateX(-300px);
+            -o-transform: translateX(-300px);
+        }
+
+
+/*--------------------------NOTAS DE MATERIAS--------------------*/
+/*ALUNO DO MEDIO OU DO FUNDAMENTAL*/
+    /*CONTEINERS*/
+        .conteiner-tipo{
+            padding-top: 10px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .conteiner-label-tipo{
+            margin-bottom: 20px;
+        }
+        /*OPÇÃO FUNDAMENTAL*/
+            .tipo-fundamental{
+                position: relative;
+
+                font-size: 22px;
+                padding: 3px;
+                padding-left: 25px;
+                padding-right: 25px;
+
+                background-color: black;
+                color: white;
+
+                cursor: pointer;
+
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+
+                transition: 0.6s;
+                -webkit-transition: 0.6s;
+                -moz-transition: 0.6s;
+                -ms-transition: 0.6s;
+                -o-transition: 0.6s;
+            }
+            .tipo-fundamental:hover{
+                box-shadow: 0px 8px 6px -6px black;
+
+                background-color: gray;
+
+                transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -moz-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+            }
+            .tipo-fundamental.selecionado{
+                background-color: gray;
+            }
+            /*OPÇÃO MEDIO*/
+                .tipo-medio{
+                    position: relative;
+
+                    font-size: 22px;
+                    padding: 3px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+
+                    background-color: black;
+                    color: white;
+
+                    cursor: pointer;
+
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+
+                    transition: 0.6s;
+                    -webkit-transition: 0.6s;
+                    -moz-transition: 0.6s;
+                    -ms-transition: 0.6s;
+                    -o-transition: 0.6s;
+                }
+
+
+/*INPUT DO NOME DO ALUNO*/
+    .input-name-aluno{
+        text-align: center;
+        width: 250px;
+        height: 25px;
+        border: solid gray 1px;
+        border-radius: 10px;
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+    }
+    .input-name-aluno:focus{
+        border: solid black 1.9px;
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+
+/*CONTEINER DAS MATERIAS*/
+    .conteiner-materias{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*CONTEINER DA MATERIA*/
+        .materia{
+            margin-top: 15px;
+            width: 260px;
+            margin-bottom: 5px;
+
+            padding-left: 100px;
+        }
+        /*NOME DA MATERIA*/
+            .nome-materia{
+                position: relative;
+                background-color: black;
+                color: white;
+                width: 140px;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                transition: 0.6s;
+            }
+            .nome-materia:hover{
+                box-shadow: 0px 8px 6px -6px black;
+                background-color: gray;
+                transform: translateY(-5px);
+                -webkit-transform: translateY(-5px);
+                -moz-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+            }
+    /*CONTEINER INPUT*/
+        .div-input-2{
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        /*INPUT DE NOTAS*/
+            .input-2{
+                width: 50px;
+                height: 25px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                text-align: center;
+                border: solid gray 1px;
+                transition: 0.6s;
+            }
+            .input-2:focus{
+                border: solid black 1.9px;
+                box-shadow: 0 0 0 0;
+                outline: 0;
+            }
+
+/*ANIMAÇÃO DE ATIVAÇÃO DO CONTEINER DA MATERIA*/
+    .conteiner-ocultador-materia{
+        display: flex;
+        justify-content: center;
+    }
+    /*OCULTAR SELECT*/
+    .cortina-select{
+        overflow: hidden;
+        width: 200px;
+        height: 55px;
+        transition: 2s;
+    }
+    .conteiner-select-medio{
+        position: relative;
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+    }
+    .conteiner-select-fundamen{
+        position: relative;
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+}
+    .esconde-select{
+        transform: translateY(-55px);
+        -webkit-transform: translateY(-55px);
+        -moz-transform: translateY(-55px);
+        -ms-transform: translateY(-55px);
+        -o-transform: translateY(-55px);
+}
+    .mostra-select{
+        transform: translateY(-55px);
+        -webkit-transform: translateY(-55px);
+        -moz-transform: translateY(-55px);
+        -ms-transform: translateY(-55px);
+        -o-transform: translateY(-55px);
+}
+
+    /*OCULTAR QUIMICA E FISICA*/
+    .ocultador-de-materia1{
+        overflow: hidden;
+        width: 155px;
+        transition: 2s;
+    }
+    .ocultador-de-materia2{
+        overflow: hidden;
+        width: 155px;
+        transition: 2s;
+    }
+    .diminuir{
+        height: 0px;
+    }
+    .oculto1{
+        transform: translateX(160px);
+        -webkit-transform: translateX(160px);
+        -moz-transform: translateX(160px);
+        -ms-transform: translateX(160px);
+        -o-transform: translateX(160px);
+    }
+    .oculto2{
+        transform: translateX(-160px);
+        -webkit-transform: translateX(-160px);
+        -moz-transform: translateX(-160px);
+        -ms-transform: translateX(-160px);
+        -o-transform: translateX(-160px);
+    }
+    .mat.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .histo.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+
+    }
+
+
+    .conteiner-quimica{
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+    }
+    .quimi.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .conteiner-fisica{
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+    }
+    .fisi.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+
+
+    .grama.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .arte.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .filoso.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .sociolo.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .biolo.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    .geo.ativo{
+        box-shadow: 0px 8px 6px -6px black;
+        background-color: var(--pass1);
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+
+/*INPUTS E MEDIA MATEMATICA*/
+    /*CONTEINER PAI DOS CONTEINER INPUT*/
+        .conteiner-input1{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input1.aparecer1{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1mat{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1mat.aparecer-n1mat{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2mat{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2mat.aparecer-n2mat{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3mat{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3mat.aparecer-n3mat{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4mat{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4mat.aparecer-n4mat{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO DA MEDIA*/
+            .conteiner-medimat{
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-medimat.aparecer-medimat{
+                display: flex;
+                align-items: center;
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA HISTORIA*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input2{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input2.aparecer2{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1hist{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1hist.aparecer-n1hist{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2hist{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2hist.aparecer-n2hist{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3hist{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3hist.aparecer-n3hist{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4hist{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4hist.aparecer-n4hist{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO DA MEDIA*/
+            .conteiner-medihist{
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-medihist.aparecer-medihist{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA QUIMICA*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input3{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input3.aparecer3{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1quim{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1quim.aparecer-n1quim{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2quim{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2quim.aparecer-n2quim{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3quim{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3quim.aparecer-n3quim{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4quim{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4quim.aparecer-n4quim{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO DAS MEDIAS*/
+            .conteiner-mediaquim{
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-mediaquim.aparecer-mediaquim{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA FISICA*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input4{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input4.aparecer4{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1fisi{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1fisi.aparecer-n1fisi{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2fisi{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2fisi.aparecer-n2fisi{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3fisi{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3fisi.aparecer-n3fisi{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4fisi{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4fisi.aparecer-n4fisi{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO DAS MEDIAS*/
+            .conteiner-medifisi{
+                display: flex;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-medifisi.aparecer-medifisi{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA GRAMATICA*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input5{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input5.aparecer5{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1grama{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1grama.aparecer-n1grama{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2grama{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2grama.aparecer-n2grama{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3grama{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3grama.aparecer-n3grama{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4grama{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4grama.aparecer-n4grama{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO DAS MEDIAS*/
+            .conteiner-medigrama{
+                display: flex;
+                align-items: center;
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-medigrama.aparecer-medigrama{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA ARTE*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input6{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input6.aparecer6{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1arte{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1arte.aparecer-n1arte{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2arte{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2arte.aparecer-n2arte{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3arte{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3arte.aparecer-n3arte{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4arte{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4arte.aparecer-n4arte{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO MEDIA*/
+            .conteiner-mediarte{
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.8s;
+                -webkit-transition: 1.8s;
+                -moz-transition: 1.8s;
+                -ms-transition: 1.8s;
+                -o-transition: 1.8s;
+            }
+            .conteiner-mediarte.aparecer-mediarte{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA FILOSOFIA*/
+    /*CONTEINER PAI DE CONTEINERS*/
+        .conteiner-input7{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input7.aparecer7{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1filo{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1filo.aparecer-n1filo{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2filo{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2filo.aparecer-n2filo{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3filo{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3filo.aparecer-n3filo{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4filo{
+                position: relative;
+                left: -170px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4filo.aparecer-n4filo{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*RESULTDO MEDIA*/
+            .conteiner-medifilo{
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -170px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-medifilo.aparecer-medifilo{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA SOCIOLOGIA*/
+    /*CONTEINERS PAI DE CONTEINERS*/
+        .conteiner-input8{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input8.aparecer8{
+            height: 150px;
+        }
+    /*CONTEINER INPUT 1*/
+        .conteiner-n1socio{
+            position: relative;
+            left: -150px;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+        .conteiner-n1socio.aparecer-n1socio{
+            transform: translateX(150px);
+            -webkit-transform: translateX(150px);
+            -moz-transform: translateX(150px);
+            -ms-transform: translateX(150px);
+            -o-transform: translateX(150px);
+        }
+    /*CONTEINER INPUT 2*/
+        .conteiner-n2socio{
+            position: relative;
+            left: -160px;
+            transition: 1.2s;
+            -webkit-transition: 1.2s;
+            -moz-transition: 1.2s;
+            -ms-transition: 1.2s;
+            -o-transition: 1.2s;
+        }
+        .conteiner-n2socio.aparecer-n2socio{
+            transform: translateX(160px);
+            -webkit-transform: translateX(160px);
+            -moz-transform: translateX(160px);
+            -ms-transform: translateX(160px);
+            -o-transform: translateX(160px);
+        }
+    /*CONTEINER INPUT 3*/
+        .conteiner-n3socio{
+            position: relative;
+            left: -170px;
+            transition: 1.4s;
+            -webkit-transition: 1.4s;
+            -moz-transition: 1.4s;
+            -ms-transition: 1.4s;
+            -o-transition: 1.4s;
+        }
+        .conteiner-n3socio.aparecer-n3socio{
+            transform: translateX(170px);
+            -webkit-transform: translateX(170px);
+            -moz-transform: translateX(170px);
+            -ms-transform: translateX(170px);
+            -o-transform: translateX(170px);
+        }
+    /*CONTEINER INPUT 4*/
+        .conteiner-n4socio{
+            position: relative;
+            left: -180px;
+            transition: 1.6s;
+            -webkit-transition: 1.6s;
+            -moz-transition: 1.6s;
+            -ms-transition: 1.6s;
+            -o-transition: 1.6s;
+        }
+        .conteiner-n4socio.aparecer-n4socio{
+            transform: translateX(180px);
+            -webkit-transform: translateX(180px);
+            -moz-transform: translateX(180px);
+            -ms-transform: translateX(180px);
+            -o-transform: translateX(180px);
+        }
+    /*RESULTADO MEDIA*/
+        .conteiner-medisocio{
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -190px;
+            transition: 1.6s;
+            -webkit-transition: 1.6s;
+            -moz-transition: 1.6s;
+            -ms-transition: 1.6s;
+            -o-transition: 1.6s;
+        }
+        .conteiner-medisocio.aparecer-medisocio{
+            transform: translateX(190px);
+            -webkit-transform: translateX(190px);
+            -moz-transform: translateX(190px);
+            -ms-transform: translateX(190px);
+            -o-transform: translateX(190px);
+        }
+        .reprovado{
+            color: red;
+        }
+        .aprovado{
+            color: green;
+        }
+
+/*INPUTS E MEDIA BIOLOGIA*/
+    /*CONTEINER PAI DE CONTEINERS*/
+        .conteiner-input9{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input9.aparecer9{
+            height: 150px;
+        }
+        /*CONTEINER INPUT 1*/
+            .conteiner-n1bio{
+                position: relative;
+                left: -150px;
+                transition: 1s;
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+            .conteiner-n1bio.aparecer-n1bio{
+                transform: translateX(150px);
+                -webkit-transform: translateX(150px);
+                -moz-transform: translateX(150px);
+                -ms-transform: translateX(150px);
+                -o-transform: translateX(150px);
+            }
+        /*CONTEINER INPUT 2*/
+            .conteiner-n2bio{
+                position: relative;
+                left: -160px;
+                transition: 1.2s;
+                -webkit-transition: 1.2s;
+                -moz-transition: 1.2s;
+                -ms-transition: 1.2s;
+                -o-transition: 1.2s;
+            }
+            .conteiner-n2bio.aparecer-n2bio{
+                transform: translateX(160px);
+                -webkit-transform: translateX(160px);
+                -moz-transform: translateX(160px);
+                -ms-transform: translateX(160px);
+                -o-transform: translateX(160px);
+            }
+        /*CONTEINER INPUT 3*/
+            .conteiner-n3bio{
+                position: relative;
+                left: -170px;
+                transition: 1.4s;
+                -webkit-transition: 1.4s;
+                -moz-transition: 1.4s;
+                -ms-transition: 1.4s;
+                -o-transition: 1.4s;
+            }
+            .conteiner-n3bio.aparecer-n3bio{
+                transform: translateX(170px);
+                -webkit-transform: translateX(170px);
+                -moz-transform: translateX(170px);
+                -ms-transform: translateX(170px);
+                -o-transform: translateX(170px);
+            }
+        /*CONTEINER INPUT 4*/
+            .conteiner-n4bio{
+                position: relative;
+                left: -180px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-n4bio.aparecer-n4bio{
+                transform: translateX(180px);
+                -webkit-transform: translateX(180px);
+                -moz-transform: translateX(180px);
+                -ms-transform: translateX(180px);
+                -o-transform: translateX(180px);
+            }
+        /*RESULTADO MEDIA*/
+            .conteiner-medibio{
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -190px;
+                transition: 1.6s;
+                -webkit-transition: 1.6s;
+                -moz-transition: 1.6s;
+                -ms-transition: 1.6s;
+                -o-transition: 1.6s;
+            }
+            .conteiner-medibio.aparecer-medibio{
+                transform: translateX(190px);
+                -webkit-transform: translateX(190px);
+                -moz-transform: translateX(190px);
+                -ms-transform: translateX(190px);
+                -o-transform: translateX(190px);
+            }
+            .reprovado{
+                color: red;
+            }
+            .aprovado{
+                color: green;
+            }
+
+/*INPUTS E MEDIA GEOGRAFIA*/
+    /*CONTEINER PAI DOS CONTEINERS*/
+        .conteiner-input10{
+            overflow: hidden;
+            height: 0px;
+            transition: 0.6s;
+            -webkit-transition: 0.6s;
+            -moz-transition: 0.6s;
+            -ms-transition: 0.6s;
+            -o-transition: 0.6s;
+        }
+        .conteiner-input10.aparecer10{
+            height: 150px;
+        }
+    /*CONTEINER INPUT 1*/
+        .conteiner-n1geo{
+            position: relative;
+            left: -150px;
+            transition: 1s;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+        }
+        .conteiner-n1geo.aparecer-n1geo{
+            transform: translateX(150px);
+            -webkit-transform: translateX(150px);
+            -moz-transform: translateX(150px);
+            -ms-transform: translateX(150px);
+            -o-transform: translateX(150px);
+        }
+    /*CONTEINER INPUT 2*/
+        .conteiner-n2geo{
+            position: relative;
+            left: -160px;
+            transition: 1.2s;
+            -webkit-transition: 1.2s;
+            -moz-transition: 1.2s;
+            -ms-transition: 1.2s;
+            -o-transition: 1.2s;
+        }
+        .conteiner-n2geo.aparecer-n2geo{
+            transform: translateX(160px);
+            -webkit-transform: translateX(160px);
+            -moz-transform: translateX(160px);
+            -ms-transform: translateX(160px);
+            -o-transform: translateX(160px);
+        }
+    /*CONTEINER INPUT 3*/
+        .conteiner-n3geo{
+            position: relative;
+            left: -170px;
+            transition: 1.4s;
+            -webkit-transition: 1.4s;
+            -moz-transition: 1.4s;
+            -ms-transition: 1.4s;
+            -o-transition: 1.4s;
+        }
+        .conteiner-n3geo.aparecer-n3geo{
+            transform: translateX(170px);
+            -webkit-transform: translateX(170px);
+            -moz-transform: translateX(170px);
+            -ms-transform: translateX(170px);
+            -o-transform: translateX(170px);
+        }
+    /*CONTEINER INPUT 4*/
+        .conteiner-n4geo{
+            position: relative;
+            left: -180px;
+            transition: 1.6s;
+            -webkit-transition: 1.6s;
+            -moz-transition: 1.6s;
+            -ms-transition: 1.6s;
+            -o-transition: 1.6s;
+        }
+        .conteiner-n4geo.aparecer-n4geo{
+            transform: translateX(180px);
+            -webkit-transform: translateX(180px);
+            -moz-transform: translateX(180px);
+            -ms-transform: translateX(180px);
+            -o-transform: translateX(180px);
+        }
+    /*RESULTADO MEDIA*/
+        .conteiner-medigeo{
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -190px;
+            transition: 1.6s;
+            -webkit-transition: 1.6s;
+            -moz-transition: 1.6s;
+            -ms-transition: 1.6s;
+            -o-transition: 1.6s;
+        }
+        .conteiner-medigeo.aparecer-medigeo{
+            transform: translateX(190px);
+            -webkit-transform: translateX(190px);
+            -moz-transform: translateX(190px);
+            -ms-transform: translateX(190px);
+            -o-transform: translateX(190px);
+        }
+        .reprovado{
+            color: red;
+        }
+        .aprovado{
+            color: green;
+        }
+
+
+/*-------------------------MOSTRAGEM DE ALUNOS--------------------*/
+/*CONTEINER DA LISTA DE ALUNOS*/
+    .conteiner-resultado-alunos{
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+    }
+    /*PADRÃO DA  LISTAGEM*/
+        .conteiner-listagem{
+            margin-top: 20px;
+            padding: 10px;
+            width: 350px;
+            height: 35px;
+
+
+            background-color: rgb(128, 138, 245);
+            display: flex;
+            flex-flow: column;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            cursor: pointer;
+
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+
+            overflow: hidden;
+        }
+        .conteiner-listagem.listagem-ativa{
+            height: 280px;
+        }
+        /*ICONE DE LISTAGEM*/
+            .conteiner-icone-listagem{
+                padding: 10px;
+
+                transition: 0.2s;
+                -webkit-transition: 0.2s;
+                -moz-transition: 0.2s;
+                -ms-transition: 0.2s;
+                -o-transition: 0.2s;
+
+                border-radius:50px;
+                -webkit-border-radius:50px;
+                -moz-border-radius:50px;
+                -ms-border-radius:50px;
+                -o-border-radius:50px;
+                -webkit-border-radius: 50px;
+            }
+            .icone-delete:hover{
+                color: red;
+            }
+        /*INTERAÇÃO COM CONTEINER LISTAGEM*/
+            .conteiner-listagem:hover{
+                box-shadow: 0px 10px 6px -6px black;
+                transform: translateY(-6px);
+                -webkit-transform: translateY(-6px);
+                -moz-transform: translateY(-6px);
+                -ms-transform: translateY(-6px);
+                -o-transform: translateY(-6px);
+            }
+            .icones-superiores{
+                display: flex;
+                justify-content: space-between;
+            }
+/*----------------ESTILO DA PAGINA DE EDIÇÃO DE NOTAS---------------------*/
+.conteiner-input-3{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.div-input-3{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-top: 10px;
+}
+.input-3{
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    border: solid gray 1px;
+    border-radius: 10px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+
+    margin-left: 10px;
+
+}
+.input-3:focus{
+    border: solid black 1.9px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+
+.input-val{
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    border: solid gray 1px;
+    border-radius: 10px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+
+    margin-left: 10px;
+}
+
+
+.medias-edit{
+    display: flex;
+    flex-flow: row;
+}
+.conteiner-medias-edit{
+    margin-right: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.legenda-media{
+    margin-right: 15px;
+    margin-left: 25px;
+}
+
+
+
+
+.legenda2{
+    margin-left: 50px;
+    margin-right: 35px;
+}
+
+
+
+
+/*--------------------------TABELA DE NOTAS-------------------------------*/
+table{
+    cursor: pointer;
+    border: solid black 1px;
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+th{
+    cursor: pointer;
+    border: solid black 1px;
+}
+td{
+    cursor: pointer;
+    text-align: center;
+    border: solid black 1px;
+}
+
+/*-------------------------MOSTRAGEM DE SALAS--------------------*/
+/*CONTEINER DA LISTA DE SALAS*/
+.conteiner-listas{
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+/*PADRÃO DA  LISTAGEM*/
+.conteiner-listagem-sala{
+    margin-top: 20px;
+    padding: 10px;
+    width: 350px;
+
+
+    background-color: rgb(128, 138, 245);
+    display: flex;
+    flex-flow: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.conteiner-listagem-sala:hover{
+    box-shadow: 0px 10px 6px -6px black;
+    transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+}
+
+
+.conteiner-aluno{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/*----------------------RESPONSIVIDADE---------------------------*/
+/*RESPONSIVIDADE 1*/
+    @media screen and (min-width: 1320px){
+        /*RESPONSIVIDADE DOS INPUTS E CONTEINERS*/
+            .materia{
+                margin-top: 15px;
+                width: 260px;
+                margin-bottom: 5px;
+
+                padding-left: 0;
+            }
+
+            .conteiner-esc{
+                display: flex;
+                flex-flow: row;
+            }
+            .esc-2{
+                margin-right: 10px;
+            }
+            .conteiner-materias-flex-1{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+            .conteiner-materias-flex-2{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+
+
+            .ocultador-de-materia1{
+                overflow: hidden;
+                width: 260px;
+                transition: 2s;
+            }
+            .ocultador-de-materia2{
+                overflow: hidden;
+                width: 260px;
+                transition: 2s;
+            }
+            .diminuir{
+                width: 0px;
+                height: 0px;
+            }
+            .oculto1{
+                transform: translateY(160px);
+                -webkit-transform: translateY(160px);
+                -moz-transform: translateY(160px);
+                -ms-transform: translateY(160px);
+                -o-transform: translateY(160px);
+}
+            .oculto2{
+                transform: translateY(-160px);
+                -webkit-transform: translateY(-160px);
+                -moz-transform: translateY(-160px);
+                -ms-transform: translateY(-160px);
+                -o-transform: translateY(-160px);
+}
+        }
+
+/*RESPONSIVIDADE 2*/
+    @media screen and (min-width: 800px){
+        /*RESPONVIDADE DO MENU*/
+            .conteiner-menu{
+                width: 25%;
+            }
+            .servicos{
+                width: 25%;
+            }
+            .input-1{
+                width: 200px;
+            }
+            .janela1{
+                margin: auto;
+                width: 30%;
+                height: 80%;
+            }
+            .janela2{
+                margin: auto;
+                width: 30%;
+                height: 80%;
+            }
+
+            .conteiner-listagem-sala{
+                margin-top: 20px;
+                padding: 10px;
+                width: 500px;
+            }
+
+            .conteiner-listagem{
+                margin-top: 20px;
+                padding: 10px;
+                width: 500px;
+                height: 35px;
+            }
+
+            table{
+                font-size: 14px;
+            }
+    }

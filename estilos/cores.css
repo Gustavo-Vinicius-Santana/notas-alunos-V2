@@ -1,0 +1,152 @@
+                    /*COR GOOGLE ICONS*/
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+                    /*cores na raiz*/
+html{
+    --bg0: rgb(32, 33, 48);
+    --bg1: white;
+    --bg2: black;
+    --bg3: rgb(45, 45, 54);
+    --bg4: rgb(185, 185, 187);
+    --color1: white;
+    --color2: black;
+    --pass1: gray;
+}
+                /*CORES DE ELEMENTOS*/
+/*MENU*/
+.conteiner-menu{
+    background-color: var(--bg2);
+    color: var(--color1);
+}
+.sel{
+    color: var(--color1);
+}
+.sel:hover{
+    color: var(--pass1);
+}
+/*CORPO*/
+body{
+    background-color: var(--bg1);
+}
+.corpo-principal{
+    background-color: var(--bg1);
+}
+/*JANELAS*/
+.janela1{
+    background-color: var(--bg1);
+    border: solid black 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.janela2{
+    background-color: var(--bg1);
+    border: solid black 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/*ICONES E TEXTOS*/
+.text1{
+    color: var(--color2);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.icone1{
+    color: var(--color2);
+}
+/*FORMULARIO*/
+.esc-1{
+    background-color: var(--bg0);
+    color: var(--color1);
+}
+.esc-2{
+    background-color: var(--bg0);
+    color: var(--color1);
+}
+
+                                /*CORES DO DARK MODE*/
+
+body.dark0{
+    background-color: var(--bg0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.corpo-principal.dark1{
+    background-color: var(--bg0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.janela1.dark2{
+    background-color: var(--bg3);
+    border: solid white 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.janela2.dark3{
+    background-color: var(--bg3);
+    border: solid white 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.text1.dark4{
+    color: var(--color1);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.btn-1.dark5{
+    color: var(--color1);
+    background-color: transparent;
+    border: solid var(--color1) 1px;
+}
+.btn-1.dark5:hover{
+    color: black;
+    background-color: white;
+    border: solid gray 1px;
+}
+.btn-2.dark6{
+    color: var(--color1);
+    background-color: transparent;
+    border: solid var(--color1) 1px;
+}
+.btn-2.dark6:hover{
+    color: black;
+    background-color: white;
+    border: solid gray 1px;
+}
+
+.escolha.dark7{
+    background-color: var(--bg1);
+    color: var(--color2);
+}
+.esc-1.sele-d1{
+    background-color: gray;
+    color: white;
+}
+.esc-2.sele-d1{
+    background-color: gray;
+    color: white;
+}
